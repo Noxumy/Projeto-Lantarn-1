@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-bottom: 60px;
+    background-color: #0F1A1D;
+        color: #EAF6F6;
+}
+
+
+/* ------- NAVBAR ------ */
+.charlie {
+    display: flex;
+    align-items: center;
+    background-color: #0B1215;
+    padding: 1vw 2vw;
+    gap: 3vw;
+    position: fixed;
+    bottom: 10px;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    z-index: 2;   /*--- ajusta a camada ---*/
+
+}
+
+.charlie a {
+    color: #EAF6F6;
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.charlie a:hover {
+    background-color: #1B3A3F;
+    color: #8FE3E0;
+}
+
+
+.charlie a strong {
+    color: #8FE3E0;
+    font-size: 1.3vw;
+}
+
+
+.charlie img {
+    margin-left: auto;
+    height: 3.5vw;
+    width: auto;
+}
+/* ----- fim navbar ----- */
+
+
+
+
+.texto h1{
+    font-size: 70px;
+    margin-left: 450px;
+    translate: 0px 120px;
+    margin-top: 10vw;
+    margin-left: 25vw;
+}
+
+
+/*-----cards-----*/
+
+.destaques {
+    display: flex;
+    flex-wrap: wrap;           /* quebra linha em telas pequenas */
+    gap: 25px;
+    padding: 50px 30px;
+}
+ 
+.card {
+    background-color: #1B3A3F;
+    color: #EAF6F6;
+    border-radius: 10px;
+    padding: 80px;
+    width: 880px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* sombra leve pra dar profundidade */
+    transition: transform 0.3s;  /* efeito suave ao passar o mouse */
+    margin-top: 100px;
+    margin-right: 700px;
+    translate: 20px 20px;
+}
+
+.card:hover {
+    transition: transform 0.3s;  /* efeito suave ao passar o mouse */
+    transform: translateY(-15px);
+    transition: 0.5s;
+    background-color: #2c717c9d;
+}
+
+ 
+.card h3 {
+    margin-top: -10px;
+    text-align: center;
+    color: #8FE3E0;
+    margin-bottom: 10px;
+    font-size: 27px;
+    margin-right: 200px;
+}
+ 
+.card p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-right: 200px;
+    color: #EAF6F6;
+}
+
+
+.card img{
+    display: flex;
+    margin-left: 555px;
+    transform: translateY(25px);
+    margin-top: -200px;
+    height: 200px;
+}
+
+#Leitor{
+    height: 200px;
+    transform: translateY(-80px);
+    margin-left: 555px;
+}
+
+#teclado{
+    height: 200px;
+    transform: translateY(0px);
+    margin-left: 555px;
+}
+
+#legenda{
+    transform: translateY(0px);
+}
+
+
+/*----- Card especial -----*/
+
+.card-importante {
+    background-color: #150A0C;
+    color: #F2C9D1;
+    border-radius: 10px;
+    padding: 80px;
+    width: 880px;
+    transition: transform 0.3s;
+    border: 1px solid #3A1620;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    margin-top: 10vw;
+    margin-left: 3vw;
+}
+
+
+.card-importante:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+    background-color: #f2c9d1bd; /* escurece um pouco mais no hover */
+    color: #150A0C;
+    border: 1px solid #E8768C;
+    box-shadow: 0px 0px 160px #e8768d8e;
+}
+
+
+/* ----- RODAPÉ ----- */
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7vw;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas de inclusão</title>
+  <link rel="stylesheet" href="dickas.css">
+</head>
+<body>
+
+  <!-- navbar/logo -->
+    <nav class="charlie">
+
+    <a href="../1-inicio/index.html">Página inicial</a>
+    <a href="../2-sobre/sobre.html"> Sobre o projeto</a>
+    <a href="../3-acessibilidade-D/acessibilidade.html">Acessibilidade digital</a>
+    <a href="../4-Tecnologias-ass/tecnologia.html">Tecnologias assistivas</a>
+    <a href="../5-dicas-inc/dickas.html"><strong>Dicas de inclusão</strong></a>
+    <a href="../6-contato/contato.html">Contato</a>
+
+
+<!-- audio na img -->
+     <img id="minhaImagem" src="../0-icones/Lantern-mouse.webp" alt="logo">
+    <!-- elemento de áudio invisível, usado para tocar o som -->
+  <audio id="player"></audio>
+
+  <script>
+    const imagem = document.getElementById('minhaImagem');
+    const player = document.getElementById('player');
+
+    // lista com os caminhos dos seus arquivos de áudio
+    const audios = [
+        '../0audio/slug-pup-meow.mp3',
+        '../0audio/survivor-meow.mp3',
+        '../0audio/groudmand-meow.mp3'
+    ];
+
+    imagem.addEventListener('click', function () {
+      // escolhe um índice aleatório da lista
+      const indiceAleatorio = Math.floor(Math.random() * audios.length);
+      
+      player.src = audios[indiceAleatorio];
+      player.play();
+    });
+  </script>
+
+</nav>
+
+
+<!-- ===== Começo ===== -->
+<div class="texto">
+    <h1>Dicas de Inclusão</h1>
+    <p>Reunimos recomendações práticas para tornar sites e conteúdos digitais mais acessíveis. Você não precisa aplicar tudo de uma vez — comece pelo básico e vá evoluindo aos poucos.</p>
+</div>
+ 
+ 
+<!-- ========= 1-CARDS - dicas rápidas pra começar ========= -->
+<h2 class="secao-titulo">Dicas rápidas para começar</h2>
+<section class="grade-cards">
+ 
+    <div class="dica-card">
+        <h3>Use texto alternativo</h3>
+        <p>Toda imagem deve ter uma descrição no atributo <code>alt</code>.</p>
+    </div>
+ 
+    <div class="dica-card">
+        <h3>Cuide do contraste</h3>
+        <p>Texto e fundo precisam ter contraste suficiente pra serem lidos com facilidade.</p>
+    </div>
+ 
+    <div class="dica-card">
+        <h3>Permita navegação por teclado</h3>
+        <p>Nem todo mundo usa mouse. Teste seu site apertando só "Tab".</p>
+    </div>
+ 
+    <div class="dica-card">
+        <h3>Escreva de forma clara</h3>
+        <p>Frases curtas e diretas ajudam pessoas com deficiência cognitiva.</p>
+    </div>
+ 
+    <div class="dica-card">
+        <h3>Adicione legendas</h3>
+        <p>Vídeos devem ter legenda ou transcrição disponível.</p>
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ========= 2-LISTA NUMERADA - passo a passo mais detalhado ======== -->
+<h2 class="secao-titulo">Passo a passo para revisar seu site</h2>
+<section class="lista-numerada">
+    <ol>
+        <li><strong>Verifique as imagens:</strong> confira se todas têm um texto alternativo (<code>alt</code>) que descreva o conteúdo de forma objetiva.</li>
+        <li><strong>Teste o contraste de cores:</strong> use ferramentas gratuitas online para verificar se o contraste entre texto e fundo é suficiente.</li>
+        <li><strong>Navegue só com o teclado:</strong> tente usar seu site inteiro sem tocar no mouse, usando apenas "Tab" e "Enter".</li>
+        <li><strong>Adicione legendas em vídeos:</strong> revise se todo conteúdo em áudio ou vídeo tem legenda ou transcrição.</li>
+        <li><strong>Estruture com hierarquia:</strong> organize o conteúdo com títulos (h1, h2, h3) na ordem correta, sem pular níveis.</li>
+        <li><strong>Simplifique a linguagem:</strong> releia os textos e corte palavras difíceis ou frases muito longas.</li>
+        <li><strong>Teste com um leitor de tela:</strong> ative um leitor de tela e veja se seu site faz sentido só ouvindo.</li>
+    </ol>
+</section>
+ 
+ 
+<!-- ======== 3-BLOCOS INFORMATIVOS ======== -->
+<h2 class="secao-titulo">Entenda melhor cada prática</h2>
+<section class="blocos-info">
+ 
+    <div class="bloco-info">
+        <h3>Por que o contraste importa?</h3>
+        <p>Pessoas com baixa visão ou daltonismo podem não conseguir ler textos com pouco contraste em relação ao fundo. A recomendação geral é manter uma diferença clara entre as cores de texto e fundo, evitando combinações como cinza claro sobre branco.</p>
+    </div>
+ 
+    <div class="bloco-info">
+        <h3>O que é um bom texto alternativo?</h3>
+        <p>O texto alternativo deve descrever o que a imagem transmite, de forma objetiva. Em vez de "imagem1.jpg", escreva algo como "Mulher usando cadeira de rodas trabalhando em um notebook".</p>
+    </div>
+ 
+    <div class="bloco-info">
+        <h3>Navegação por teclado, por quê?</h3>
+        <p>Pessoas com limitações motoras muitas vezes não conseguem usar o mouse. Garantir que todos os elementos (links, botões, formulários) sejam acessíveis via teclado é essencial para essas pessoas navegarem com autonomia.</p>
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ========= 4-SEÇÕES COM ÍCONES - por tipo de deficiência =========  -->
+<h2 class="secao-titulo">Dicas por tipo de deficiência</h2>
+<section class="grade-icones">
+ 
+    <div class="icone-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/></svg>
+        <div>
+            <h3>Deficiência visual</h3>
+            <p>Use textos alternativos, bom contraste e permita ampliação sem quebrar o layout.</p>
+        </div>
+    </div>
+ 
+    <div class="icone-card">
+        <div>
+            <h3>Deficiência auditiva</h3>
+            <p>Adicione legendas, transcrições e evite depender só de áudio para passar informações importantes.</p>
+        </div>
+    </div>
+ 
+    <div class="icone-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg>
+        <div>
+            <h3>Deficiência motora</h3>
+            <p>Garanta navegação completa por teclado e botões grandes o suficiente para cliques precisos.</p>
+        </div>
+    </div>
+ 
+    <div class="icone-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 15c1 1 5 1 6 0"/></svg>
+        <div>
+            <h3>Deficiência cognitiva</h3>
+            <p>Use linguagem simples, estrutura clara e evite excesso de informação em uma mesma tela.</p>
+        </div>
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ======= 5-CAIXAS DE DESTAQUE - avisos importantes ======= -->
+<h2 class="secao-titulo">Atenção redobrada</h2>
+<section class="caixas-destaque">
+ 
+    <div class="caixa-destaque">
+        <strong>Dica de ouro:</strong> acessibilidade não é um "extra" — pense nela desde o início do projeto, não só no final.
+    </div>
+ 
+    <div class="caixa-destaque">
+        <strong>Cuidado:</strong> cores muito parecidas (como vermelho e verde) podem ser indistinguíveis para pessoas com daltonismo. Não use só a cor para transmitir uma informação importante.
+    </div>
+ 
+    <div class="caixa-destaque">
+        <strong>Lembre-se:</strong> teste seu site com pessoas reais sempre que possível — nada substitui a experiência de quem realmente usa tecnologias assistivas no dia a dia.
+    </div>
+ 
+</section>
+ 
+ 
+<!-- rodapé?? em desenvolvimento -->
+<footer>
+    <p>Desenvolvedores: <br><a href="#">Noxumy</a></p>
+</footer>
+
+
+<!-- Vlibras -->
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget(); </script>
+
+
+
+</body>
+</html>

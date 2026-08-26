@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sobre</title>
+    <link rel="stylesheet" href="sobre.css">
+</head>
+<body>
+
+
+<!-- navbar/logo -->
+<nav class="charlie">
+
+    <a href="../1-inicio/index.html">Página inicial</a>
+    <a href="../2-sobre/sobre.html"><strong> Sobre o projeto</strong></a>
+    <a href="../3-acessibilidade-D/acessibilidade.html">Acessibilidade digital</a>
+    <a href="../4-Tecnologias-ass/tecnologia.html">Tecnologias assistivas</a>
+    <a href="../5-dicas-inc/dickas.html">Dicas de inclusão</a>
+    <a href="../6-contato/contato.html">Contato</a>
+    
+
+<!-- audio na img -->
+    <img id="minhaImagem" src="../0-icones/Lantern-mouse.webp" alt="logo">
+    <!-- elemento de áudio invisível, usado para tocar o som -->
+  <audio id="player"></audio>
+
+  <script>
+    const imagem = document.getElementById('minhaImagem');
+    const player = document.getElementById('player');
+
+    // lista com os caminhos dos seus arquivos de áudio
+    const audios = [
+      '../0audio/slug-pup-meow.mp3',
+      '../0audio/survivor-meow.mp3',
+      '../0audio/groudmand-meow.mp3'
+    ];
+
+    imagem.addEventListener('click', function () {
+      // escolhe um índice aleatório da lista
+      const indiceAleatorio = Math.floor(Math.random() * audios.length);
+      
+      player.src = audios[indiceAleatorio];
+      player.play();
+    });
+  </script>
+
+</nav>
+
+
+
+<!-- textos/titulo/imagem-->
+<div class="texto">
+ 
+    <h1>Sobre o Projeto</h1>
+ 
+    <p>A <strong>Conecta Inclusão</strong> é uma organização dedicada a promover a acessibilidade digital e a inclusão de pessoas com deficiência no mundo online. Acreditamos que a tecnologia só cumpre seu papel quando alcança a todos, sem exceção.</p>
+ 
+    <h2>Objetivo do site</h2>
+    <p>Este site tem como objetivo reunir informações, dicas e recursos sobre acessibilidade digital e tecnologias assistivas, ajudando pessoas e empresas a construírem ambientes digitais mais inclusivos e acessíveis para todos.</p>
+ 
+    <h2>Público-alvo</h2>
+    <p>O conteúdo é voltado para desenvolvedores, designers, estudantes, educadores, pessoas com deficiência e qualquer pessoa interessada em aprender sobre inclusão digital e como aplicá-la no dia a dia.</p>
+ 
+    <h2>Por que a inclusão digital importa?</h2>
+    <p>Milhões de pessoas enfrentam barreiras ao acessar sites, aplicativos e conteúdos online devido a deficiências visuais, auditivas, motoras ou cognitivas. Um ambiente digital acessível garante autonomia, participação social e igualdade de oportunidades para todos, sem exceção.</p>
+ 
+    <img src="ChatGPT Image 4 de ago. de 2026, 21_01_14.png" alt="Ícones representando acessibilidade: cadeira de rodas, deficiência visual, deficiência auditiva e neurodiversidade">
+ 
+</div>
+ 
+ 
+
+<!-- cards -->
+<section class="destaques">
+ 
+    <div class="card">
+        <h3>Missão</h3>
+        <p>Promover a acessibilidade digital, oferecendo conhecimento e recursos que tornem a internet um espaço mais inclusivo para todas as pessoas.</p>
+    </div>
+ 
+    <div class="card">
+        <h3>Visão</h3>
+        <p>Ser referência em conteúdos sobre inclusão digital, contribuindo para um futuro em que a acessibilidade seja padrão, não exceção.</p>
+    </div>
+ 
+    <div class="card">
+        <h3>Valores</h3>
+        <p>Respeito, empatia, diversidade e compromisso com a igualdade de acesso à tecnologia e à informação.</p>
+    </div>
+ 
+</section>
+ 
+<!-- rodapé?? em desenvolvimento -->
+<footer>
+    <p>Desenvolvedores: <br><a href="#">Noxumy</a></p>
+</footer>
+
+<!-- Vlibras -->
+
+   <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget(); </script>
+
+</body>
+</html>

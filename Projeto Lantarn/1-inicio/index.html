@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- navbar/logo -->
+<nav class="charlie">
+
+    <a href="../1-inicio/index.html"><strong>Página inicial</strong></a>
+    <a href="../2-sobre/sobre.html">Sobre o projeto</a>
+    <a href="../3-acessibilidade-D/acessibilidade.html">Acessibilidade digital</a>
+    <a href="../4-Tecnologias-ass/tecnologia.html">Tecnologias assistivas</a>
+    <a href="../5-dicas-inc/dickas.html">Dicas de inclusão</a>
+    <a href="../6-contato/contato.html">Contato</a>
+    
+<!-- audio na img -->
+    <img id="minhaImagem" src="../0-icones/Lantern-mouse.webp" alt="logo">
+    <!-- elemento de áudio invisível, usado para tocar o som -->
+  <audio id="player"></audio>
+
+  <script>
+    const imagem = document.getElementById('minhaImagem');
+    const player = document.getElementById('player');
+
+    // lista com os caminhos dos seus arquivos de áudio
+    const audios = [
+      '../0audio/slug-pup-meow.mp3',
+      '../0audio/survivor-meow.mp3',
+      '../0audio/groudmand-meow.mp3'
+    ];
+
+    imagem.addEventListener('click', function () {
+      // escolhe um índice aleatório da lista
+      const indiceAleatorio = Math.floor(Math.random() * audios.length);
+      
+      player.src = audios[indiceAleatorio];
+      player.play();
+    });
+  </script>
+
+</nav>
+
+
+
+<!-- texto/titulo/subtitulo/imagem-->
+<div class="texto">
+
+    <h1>Tecnologia para Todos: Inclusão e Acessibilidade Digital</h1>
+        <h2>A inclusão é a ponte entre a inovação e a igualdade.</h2>
+        <p>A tecnologia deve aproximar pessoas e criar oportunidades. Promover a inclusão e a acessibilidade digital significa desenvolver ferramentas, plataformas e conteúdos que possam ser utilizados por todos, independentemente de limitações físicas, sensoriais, cognitivas ou sociais. Assim, construímos um ambiente digital mais justo, autônomo e participativo.</p>
+        <img src="OIP.webp" alt="">
+
+</div>
+
+
+
+<!-- cards/botão -->
+<section class="destaques">
+
+    <a href="../3-acessibilidade-D/acessibilidade.html" class="lnk">
+    <div class="card">
+        <h3>Acessibilidade</h3>
+        <p>Conteúdo pensado para ser acessível a todas as pessoas, independente de suas limitações.</p>
+    </div>
+    </a>
+
+
+    <a href="../4-Tecnologias-ass/tecnologia.html" class="lnk">
+    <div class="card">
+        <h3>Tecnologias Assistivas</h3>
+        <p>Ferramentas e recursos que ajudam pessoas com deficiência a usar a web com mais autonomia.</p>
+    </div>
+    </a>
+
+    <a href="../5-dicas-inc/dickas.html" class="lnk">
+    <div class="card">
+        <h3>Inclusão Digital</h3>
+        <p>Dicas práticas para tornar sites e sistemas mais inclusivos para todos.</p>
+    </div>
+    </a>
+
+</section>
+
+<a href="../2-sobre/sobre.html" class="btn-saiba-mais">Conhecer mais sobre o projeto</a>
+
+
+<!-- rodapé?? em desenvolvimento -->
+<footer>
+    <p>Desenvolvedores: <br><a href="#">Noxumy</a></p>
+</footer>
+
+<!-- Vlibras -->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget(); </script>
+
+
+</body>
+</html>

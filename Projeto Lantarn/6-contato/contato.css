@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-bottom: 60px;
+    background-color: #0F1A1D;
+    color: #EAF6F6;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-bottom: 60px;
+    background-color: #0F1A1D;
+    color: #EAF6F6;
+}
+
+
+
+/* ------- NAVBAR ------ */
+.charlie {
+    display: flex;
+    align-items: center;
+    background-color: #0B1215;
+    padding: 1vw 2vw;
+    gap: 3vw;
+    position: fixed;
+    bottom: 10px;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    z-index: 2;   /*--- ajusta a camada ---*/
+
+}
+
+.charlie a {
+    color: #EAF6F6;
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.charlie a:hover {
+    background-color: #1B3A3F;
+    color: #8FE3E0;
+}
+
+
+.charlie a strong {
+    color: #8FE3E0;
+    font-size: 1.3vw;
+}
+
+
+.charlie img {
+    margin-left: auto;
+    height: 3.5vw;
+    width: auto;
+}
+/* ----- fim navbar ----- */
+
+
+
+
+/* ----- CABEÇALHO ----- */
+.texto {
+    padding: 50px 10% 30px 10%;
+    text-align: center;
+}
+
+.texto h1 {
+    margin-top: 50px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    font-size: 16px;
+    color: #C9DFE0;
+}
+
+
+/* ===============================================
+   FORMULÁRIO - card único, simples e centralizado
+   =============================================== */
+.formulario {
+    max-width: 450px;
+    margin: 0 auto 50px auto;   /* "0 auto" centraliza horizontalmente */
+    background-color: #1B3A3F;
+    border-radius: 14px;
+    padding: 35px;
+}
+
+.campo-form {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form label {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0F1A1D;
+    color: #EAF6F6;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+    outline: 2px solid #8FE3E0;
+}
+
+.campo-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.campo-checkbox a {
+    color: #8FE3E0;
+}
+
+/* Botões lado a lado, ocupando a largura toda */
+.botoes-form {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-enviar,
+.btn-limpar {
+    flex: 1;               /* os dois botões dividem o espaço igualmente */
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-enviar {
+    background-color: #8FE3E0;
+    color: #0B1215;
+}
+
+.btn-enviar:hover {
+    background-color: #EAF6F6;
+}
+
+.btn-limpar {
+    background-color: #0F1A1D;
+    color: #EAF6F6;
+}
+
+.btn-limpar:hover {
+    background-color: #0B1215;
+}
+
+
+/* ===============================================
+   INFORMAÇÕES DE CONTATO - simples, centralizado embaixo
+   =============================================== */
+.info-contato {
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto 60px auto;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #C9DFE0;
+}
+
+.info-contato h2 {
+    color: #8FE3E0;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.info-contato a {
+    color: #8FE3E0;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+
+/* ----- RODAPÉ ----- */
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7vw;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+}

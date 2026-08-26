@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acessibilidade digital</title>
+    <link rel="stylesheet" href="acessibilidade.css">
+</head>
+<body>
+
+
+<!-- navbar/logo -->
+    <nav class="charlie">
+
+    <a href="../1-inicio/index.html">Página inicial</a>
+    <a href="../2-sobre/sobre.html"> Sobre o projeto</a>
+    <a href="../3-acessibilidade-D/acessibilidade.html"><strong>Acessibilidade digital</strong></a>
+    <a href="../4-Tecnologias-ass/tecnologia.html">Tecnologias assistivas</a>
+    <a href="../5-dicas-inc/dickas.html">Dicas de inclusão</a>
+    <a href="../6-contato/contato.html">Contato</a>
+    
+
+<!-- audio na img -->
+     <img id="minhaImagem" src="../0-icones/Lantern-mouse.webp" alt="logo">
+    <!-- elemento de áudio invisível, usado para tocar o som -->
+  <audio id="player"></audio>
+
+  <script>
+    const imagem = document.getElementById('minhaImagem');
+    const player = document.getElementById('player');
+
+    // lista com os caminhos dos seus arquivos de áudio
+    const audios = [
+        '../0audio/slug-pup-meow.mp3',
+        '../0audio/survivor-meow.mp3',
+        '../0audio/groudmand-meow.mp3'
+    ];
+
+    imagem.addEventListener('click', function () {
+      // escolhe um índice aleatório da lista
+      const indiceAleatorio = Math.floor(Math.random() * audios.length);
+      
+      player.src = audios[indiceAleatorio];
+      player.play();
+    });
+  </script>
+
+</nav>
+
+
+<!-- texto/titulo -->
+<div class="texto">
+
+    <h1>O que é <strong>Acessibilidade Digital</strong>?</h1>
+    
+    <h2>Acessibilidade Digital</h2>
+    <p>Acessibilidade digital é o conjunto de práticas e recursos que garantem que sites, aplicativos e demais conteúdos online possam ser utilizados por qualquer pessoa, incluindo aquelas com deficiência visual, auditiva, motora ou cognitiva. Isso envolve desde a forma como o conteúdo é estruturado até os recursos tecnológicos oferecidos para facilitar a navegação.</p>
+ 
+    <!-- Importância da acessibilidade digital -->
+    <h2>Por que a acessibilidade digital é importante?</h2>
+    <p>A internet se tornou essencial para estudar, trabalhar, se comunicar e acessar serviços. Quando um site não é acessível, ele exclui uma parte significativa da população do acesso a essas oportunidades. Garantir acessibilidade não é apenas uma questão legal, mas também um compromisso ético com a igualdade e a autonomia de todas as pessoas.</p>
+ 
+ 
+    <!-- Lista de barreiras encontradas na internet -->
+    <h2>Barreiras comuns encontradas na internet</h2>
+    <ul>
+        <li><strong>Imagens sem texto alternativo:</strong> impedem que leitores de tela descrevam o conteúdo para pessoas com deficiência visual.</li>
+        <li><strong>Contraste de cores insuficiente:</strong> dificulta a leitura para pessoas com baixa visão ou daltonismo.</li>
+        <li><strong>Vídeos sem legenda ou libras:</strong> excluem pessoas surdas ou com deficiência auditiva.</li>
+        <li><strong>Sites não navegáveis por teclado:</strong> prejudicam pessoas com limitações motoras que não usam o mouse.</li>
+        <li><strong>Textos muito longos ou confusos:</strong> dificultam a compreensão para pessoas com deficiência cognitiva.</li>
+    </ul>
+ 
+        <!-- Imagem obrigatória relacionada à inclusão/diversidade -->
+    <img src="img-acessi.png" alt="Ícones representando acessibilidade: cadeira de rodas, deficiência visual, deficiência auditiva e neurodiversidade">
+
+    <!-- Explicação sobre o VLibras -->
+    <h2>O que é o VLibras?</h2>
+    <p>O VLibras é uma ferramenta gratuita, desenvolvida pelo Governo Federal, que traduz automaticamente conteúdos digitais para a Língua Brasileira de Sinais (Libras). Ele funciona por meio de um avatar 3D que interpreta textos em tempo real, tornando sites mais acessíveis para pessoas surdas.</p>
+ 
+    <!-- Vantagens do VLibras -->
+    <h2>Vantagens de utilizar o VLibras</h2>
+    <ul>
+        <li><strong>Gratuito e de fácil integração:</strong> pode ser adicionado a qualquer site com poucas linhas de código.</li>
+        <li><strong>Tradução automática:</strong> não é necessário gravar vídeos com intérpretes para cada conteúdo.</li>
+        <li><strong>Amplia o alcance do site:</strong> inclui uma parcela da população que tem a Libras como primeira língua.</li>
+        <li><strong>Reforça o compromisso com a inclusão:</strong> mostra que o site se preocupa com acessibilidade de verdade.</li>
+    </ul>
+ 
+    <!-- Lista de boas práticas -->
+    <h2>Boas práticas de acessibilidade</h2>
+    <ul>
+        <li>Usar texto alternativo (<code>alt</code>) em todas as imagens.</li>
+        <li>Garantir bom contraste entre texto e fundo.</li>
+        <li>Permitir navegação completa pelo teclado.</li>
+        <li>Adicionar legendas e transcrições em vídeos e áudios.</li>
+        <li>Usar linguagem clara e objetiva.</li>
+        <li>Estruturar o conteúdo com títulos e hierarquia lógica (h1, h2, h3...).</li>
+        <li>Testar o site com leitores de tela.</li>
+    </ul>
+ 
+</div>
+ 
+ 
+<!-- ===== SEÇÃO DE PERGUNTAS FREQUENTES (FAQ) ===== -->
+<!-- <details> e <summary> são tags nativas do HTML: clicando no <summary>, o conteúdo de dentro abre/fecha sozinho, sem precisar de JavaScript -->
+<section class="faq">
+    <h2>Perguntas frequentes</h2>
+ 
+    <details>
+        <summary>Acessibilidade digital é a mesma coisa que usabilidade?</summary>
+        <p>Não exatamente. Usabilidade se refere à facilidade de uso de um site para qualquer pessoa, enquanto acessibilidade digital foca especificamente em remover barreiras para pessoas com deficiência. Um site pode ser usável, mas não acessível, e vice-versa — o ideal é que ele seja as duas coisas.</p>
+    </details>
+ 
+    <details>
+        <summary>O VLibras substitui um intérprete humano?</summary>
+        <p>Não. O VLibras é uma ferramenta de apoio muito útil para tornar conteúdos digitais mais acessíveis, mas não substitui totalmente a presença de intérpretes humanos em situações que exigem maior precisão e contexto, como eventos ao vivo ou atendimentos complexos.</p>
+    </details>
+ 
+    <details>
+        <summary>Como faço para saber se meu site é acessível?</summary>
+        <p>Existem ferramentas gratuitas de avaliação automática de acessibilidade, além da possibilidade de fazer testes manuais, como navegar pelo site usando apenas o teclado ou um leitor de tela.</p>
+    </details>
+ 
+    <details>
+        <summary>Acessibilidade digital é obrigatória por lei?</summary>
+        <p>Em muitos países, incluindo o Brasil, existem leis e normas técnicas que recomendam ou exigem acessibilidade em sites, principalmente os de órgãos públicos e grandes empresas.</p>
+    </details>
+ 
+</section>
+
+
+ 
+<!-- rodapé?? em desenvolvimento -->
+<footer>
+    <p>Desenvolvedores: <br><a href="#">Noxumy</a></p>
+</footer>
+
+
+<!-- Vlibras -->
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget(); </script>
+
+
+</body>
+</html>

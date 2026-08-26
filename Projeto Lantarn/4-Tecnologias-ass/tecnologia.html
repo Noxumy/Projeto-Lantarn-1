@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologias assistivas</title>
+    <link rel="stylesheet" href="tecnoligia.css">
+</head>
+<body>
+    
+
+    <!-- navbar/logo -->
+<nav class="charlie">
+
+    <a href="../1-inicio/index.html">Página inicial</a>
+    <a href="../2-sobre/sobre.html">Sobre o projeto</a>
+    <a href="../3-acessibilidade-D/acessibilidade.html">Acessibilidade digital</a>
+    <a href="../4-Tecnologias-ass/tecnologia.html"><strong>Tecnologias assistivas</strong></a>
+    <a href="../5-dicas-inc/dickas.html">Dicas de inclusão</a>
+    <a href="../6-contato/contato.html">Contato</a>
+    
+    <img id="minhaImagem" src="../0-icones/Lantern-mouse.webp" alt="logo">
+    <!-- elemento de áudio invisível, usado para tocar o som -->
+  <audio id="player"></audio>
+
+  <script>
+    const imagem = document.getElementById('minhaImagem');
+    const player = document.getElementById('player');
+
+    // lista com os caminhos dos seus arquivos de áudio
+    const audios = [
+      '../0audio/slug-pup-meow.mp3',
+      '../0audio/survivor-meow.mp3',
+      '../0audio/groudmand-meow.mp3'
+    ];
+
+    imagem.addEventListener('click', function () {
+      // escolhe um índice aleatório da lista
+      const indiceAleatorio = Math.floor(Math.random() * audios.length);
+      
+      player.src = audios[indiceAleatorio];
+      player.play();
+    });
+  </script>
+
+</nav>
+
+
+<div class="texto">
+
+  <h1>Tecnologias Assistivas</h1>
+
+</div>
+
+<a id="mega" href="https://cta.ifrs.edu.br/tecnologia-assistiva/ferramentas-gratuitas-de-ta">
+  <div class="card-importante">
+    <h2>Atenção, todas as ferramentas usadas nesta página foram encontradas no site oficial da 
+    <strong>CTA (Centro Tecnológico de Acessibilidade)</strong>. Mais ferramentas como essas estão disponiveis interagindo com os cards. </h2>
+  </div>
+</a>
+
+
+
+<!-- cards/img -->
+
+<section class="destaques">
+
+
+    <div class="card">
+        <h3>VLibras</h3>
+        <p><strong>VLibras</strong> é uma suíte de ferramentas gratuitas que traduz conteúdos digitais em português para a Língua Brasileira de Sinais (Libras), promovendo acessibilidade para pessoas surdas.</p>
+        
+        <a href="https://vlibras.gov.br/doc/widget/introduction/presentation.html"><img src="mini.png" alt="logo do VLibras"></a>  
+    </div>
+
+
+    
+    <div class="card">
+        <h3>Leitor de tela</h3>
+        <p>Um leitor de tela é um aplicativo de software que converte um texto em um discurso sintetizado, permitindo o usuário ouvir em vez de visualizar o conteúdo da Internet. Em termos mais formais, o conteúdo mostrado na tela é enviado para uma saída independente da presença de um monitor de vídeo. Podendo auxiliar pessoas dificudades de visão.</p>
+        <br>
+        <p>O <strong>NVDA (Non Visual Desktop Access)</strong> é um leitor de tela gratuito e de código aberto, ou seja, é um software totalmente livre de custos, indo na contramão do JAWS e Virtual Vision, onde o valor da licença é inacessível à grande parte do público alvo.</p>
+
+        <a href="https://www.nvaccess.org/">  <img id="Leitor" src="image-removebg-preview.png" alt="Logo da NVDA">  </a>
+    </div>
+ 
+
+
+    <div class="card">
+        <h3>Teclado virtual</h3>
+        <p>O<strong>Teclado virtual</strong> é uma ferramenta de acessibilidade que permite que pessoas com dificuldades em usar um teclado físico interajam com um computador. Ele exibe um teclado visual na tela, onde você pode usar o mouse ou outro dispositivo para selecionar as teclas. Para ativar o teclado na tela no Windows, você pode acessar as configurações de acessibilidade e ativar a opção "Usar o teclado virtual".</p>
+        
+        <a href="https://support.microsoft.com/pt-BR/accessibility/windows/use-the-on-screen-keyboard-osk-to-type">  <img id="teclado" src="teclado.png" alt="logo de um teclado virtual">  </a>
+    </div>
+
+
+
+    <div class="card">
+        <h3>Ampliador de tela</h3>
+        <p>Os <strong>Ampliadores de telas</strong> são dispositivos ou softwares que aumentam a visibilidade de elementos visuais em uma tela, facilitando a interação de pessoas com deficiência visual ou baixa visão.</p>
+        
+        <a href="https://zoomit.en.softonic.com/download">  <img  src="ampliar-a-tela-de-toque.png" alt="logo de ampliação de tela"> </a>
+    </div>
+
+
+
+    <div class="card">
+      <h3>Reconhecimento de voz</h3>
+      <p>O <strong>Reconhecimento de voz</strong> é uma tecnologia que converte a fala humana em texto ou identifica uma pessoa pelas características da sua voz. Você pode ativá-lo facilmente no celular ou computador para dar comandos ou ditar textos sem usar as mãos.</p>
+      
+      <a href="https://chromewebstore.google.com/detail/dictanote/aomjekmpappghadlogpigifkghlmebjk">  <img  src="reconhecimento-de-voz.png" alt="logo de reconhecimento de voz">  </a>
+    </div>
+
+
+
+    <div class="card">
+      <h3>Alternativas para mouse</h3>
+      <p> Para usuários que buscam alternativas ao mouse tradicional, existem várias opções que oferecem funcionalidades e benefícios adicionais, como controle por movimentos da cabeça, uso de dispositivos de entrada como joysticks, ou até mesmo dispositivos de entrada de duas partes, como o Footime.</p>
+      
+      <a href="https://eviacam.crea-si.com/">  <img id="legenda" src="icons8-itens-de-tecnologia-96.png" alt="logo de um mouse">  </a>
+    </div>
+ 
+</section>
+
+
+<!-- rodapé?? em desenvolvimento -->
+<footer>
+    <p>Desenvolvedores: <br><a href="#">Noxumy</a></p>
+</footer>
+
+
+<!-- Vlibras -->
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget(); </script>
+
+    
+</body>
+</html>

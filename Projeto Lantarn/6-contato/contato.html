@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <!-- navbar/logo -->
+    <nav class="charlie">
+
+    <a href="../1-inicio/index.html">Página inicial</a>
+    <a href="../2-sobre/sobre.html"> Sobre o projeto</a>
+    <a href="../3-acessibilidade-D/acessibilidade.html">Acessibilidade digital</a>
+    <a href="../4-Tecnologias-ass/tecnologia.html">Tecnologias assistivas</a>
+    <a href="../5-dicas-inc/dickas.html">Dicas de inclusão</a>
+    <a href="../6-contato/contato.html"><strong>Contato</strong></a>
+
+
+<!-- audio na img -->
+     <img id="minhaImagem" src="../0-icones/Lantern-mouse.webp" alt="logo">
+    <!-- elemento de áudio invisível, usado para tocar o som -->
+  <audio id="player"></audio>
+
+  <script>
+    const imagem = document.getElementById('minhaImagem');
+    const player = document.getElementById('player');
+
+    // lista com os caminhos dos seus arquivos de áudio
+    const audios = [
+        '../0audio/slug-pup-meow.mp3',
+        '../0audio/survivor-meow.mp3',
+        '../0audio/groudmand-meow.mp3'
+    ];
+
+    imagem.addEventListener('click', function () {
+      // escolhe um índice aleatório da lista
+      const indiceAleatorio = Math.floor(Math.random() * audios.length);
+      
+      player.src = audios[indiceAleatorio];
+      player.play();
+    });
+  </script>
+
+</nav>
+
+
+<!-- ===== CABEÇALHO ===== -->
+<div class="texto">
+    <h1>Fale Conosco</h1>
+    <p>Ficaremos felizes em ouvir você 💬</p>
+</div>
+
+
+<!-- ===== FORMULÁRIO ===== -->
+<form class="formulario" id="form-contato">
+
+    <div class="campo-form">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="campo-form">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="campo-form">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+    </div>
+
+    <div class="campo-form">
+        <label for="motivo">Motivo do contato:</label>
+        <select id="motivo" name="motivo" required>
+            <option value="">Selecione uma opção</option>
+            <option value="duvida">Dúvida</option>
+            <option value="sugestao">Sugestão</option>
+            <option value="elogio">Elogio</option>
+            <option value="problema-acessibilidade">Problema de acessibilidade</option>
+            <option value="solicitacao-informacao">Solicitação de informação</option>
+            <option value="outro">Outro</option>
+        </select>
+    </div>
+
+    <div class="campo-form">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+    </div>
+
+    <div class="campo-checkbox">
+        <input type="checkbox" id="termos" name="termos" required>
+        <label for="termos">Li e aceito os <a href="#"><strong>termos de uso</strong></a>.</label>
+    </div>
+
+    <div class="botoes-form">
+        <button type="submit" class="btn-enviar">Enviar mensagem</button>
+        <button type="reset" class="btn-limpar">Limpar</button>
+    </div>
+</form>
+
+
+<!-- ===== INFORMAÇÕES DE CONTATO (fictícias) ===== -->
+<div class="info-contato">
+    <h2>Outros canais</h2>
+    <p>
+        ✉️ contato@conectainclusao.org<br>
+    </p>
+    <p style="margin-top: 10px;">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+    </p>
+</div>
+
+
+<!-- rodapé?? em desenvolvimento -->
+<footer>
+    <p>Desenvolvedores: <br><a href="#">Noxumy</a></p>
+</footer>
+
+
+
+
+<!-- Vlibras -->
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget(); </script>
+
+
+</body>
+</html>
